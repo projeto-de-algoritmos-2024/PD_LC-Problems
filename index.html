@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Otimização de Transporte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Otimização de Transporte</h1>
+        </header>
+
+        <main>
+            <section id="interval-scheduling">
+                <h2>Agendamento de Intervalos</h2>
+                <div class="input-group">
+                    <input type="time" id="start-time">
+                    <input type="time" id="end-time">
+                    <input type="number" id="interval-weight" placeholder="Peso/Valor">
+                    <button onclick="addInterval()">Adicionar Intervalo</button>
+                </div>
+                <div id="intervals-list"></div>
+                <button onclick="calculateOptimalSchedule()">Calcular Melhor Agenda</button>
+            </section>
+
+            <section id="knapsack">
+                <h2>Capacidade de Carga</h2>
+                <div class="input-group">
+                    <input type="number" id="truck-capacity" placeholder="Capacidade do Caminhão">
+                    <input type="number" id="item-weight" placeholder="Peso do Item">
+                    <input type="number" id="item-value" placeholder="Valor do Item">
+                    <button onclick="addItem()">Adicionar Item</button>
+                </div>
+                <div id="items-list"></div>
+                <button onclick="calculateOptimalLoad()">Calcular Carga Ótima</button>
+            </section>
+
+            <section id="route-optimization">
+                <h2>Otimização de Rota</h2>
+                <div class="input-group">
+                    <input type="text" id="source" placeholder="Origem">
+                    <input type="text" id="destination" placeholder="Destino">
+                    <input type="number" id="cost" placeholder="Custo">
+                    <button onclick="addRoute()">Adicionar Rota</button>
+                </div>
+                <div id="routes-list"></div>
+                <button onclick="findOptimalRoute()">Encontrar Melhor Rota</button>
+            </section>
+
+
+        </main>
+
+        <div id="results" class="results-panel">
+            <h3>Resultados da Otimização</h3>
+            <div id="optimization-results"></div>
+        </div>
+    </div>
+
+    <script src="scripts/intervalScheduling.js"></script>
+    <script src="scripts/knapsack.js"></script>
+    <script src="scripts/bellmanFord.js"></script>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
