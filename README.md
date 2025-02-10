@@ -13,7 +13,30 @@
 O TransportDP é uma aplicação web que utiliza algoritmos de Programação Dinâmica para otimizar operações logísticas de transporte. O sistema integra três algoritmos clássicos de PD para resolver diferentes aspectos do problema de logística:
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+Seleção de horários em Agendamento de Intervalos:
+
+![AIQ](/assets/AIQ.png)
+
+Melhor Intervalo encontrado:
+
+![AIR](/assets/AIR.png)
+
+Seleção de cargas em Otimização de Carga (Knapsack):
+
+![CCQ](/assets/CCQ.png)
+
+Melhor otimização de carga encontrado:
+
+![CCR](/assets/CCR.png)
+
+Seleção de rotas:
+
+![ORQ](/assets/ORQ.png)
+
+Melhor rota encontrada:
+
+![ORR](/assets/ORR.png)
 
 ## Instalação 
 **Linguagens**: HTML, CSS, JavaScript<br>
@@ -61,3 +84,9 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
   - Rota 1: A → B, Custo 100
   - Rota 2: B → C, Custo -20
   - Rota 3: A → C, Custo 90
+
+### Vídeo de Apresentação do Projeto
+
+Contempla-se para o projeto, um vídeo que faz a apresentação do projeto TransportDP explicando os algoritmos usados e a interface desenvolvida:
+
+[Apresentação | TransportDP](https://youtu.be/wtTFCiJI0b0)
