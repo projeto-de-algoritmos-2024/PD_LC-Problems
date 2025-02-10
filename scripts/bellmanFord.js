@@ -14,7 +14,7 @@ function bellmanFord(edges) {
         distances[vertex] = Infinity;
         predecessor[vertex] = null;
     });
-
+    
     // Define a origem como o primeiro vértice
     const source = verticesList[0];
     distances[source] = 0;
@@ -37,4 +37,28 @@ function bellmanFord(edges) {
             };
         }
     }
+    
+    // Constrói os caminhos
+    const paths = {};
+    for (const vertex of verticesList) {
+        if (vertex === source) continue;
+        
+        const path = [];
+        let current = vertex;
+        
+        while (current !== null) {
+            path.unshift(current);
+            current = predecessor[current];
+        }
+        
+        paths[vertex] = {
+            distance: distances[vertex],
+            path: path
+        };
+    }
+    
+    return {
+        source: source,
+        paths: paths
+    };
 }
